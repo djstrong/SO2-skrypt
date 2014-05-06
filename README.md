@@ -9,7 +9,7 @@ Skrypt do zajęć z Systemów Operacyjnych 2
 
 * [Porady](Porady.md)
 
-1. [Instalcja systemu](1-Instalacja-systemu.md)
+1. [Instalacja systemu](1-Instalacja-systemu.md)
 2. [Git](2-Git.md)
 3. [Serwer WWW](3-Serwer-WWW.md)
 4. [Bezpieczne logowanie](4-Bezpieczne-logowanie.md)
