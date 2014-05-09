@@ -40,10 +40,29 @@ Dalej wybieramy lokalizację i układ klawiatury.
 * instalacja programu GRUB
 
 Weryfikujemy połączenie z internetem poleceniem ping.   
-``` ping 8.8.8.8 ```   
-Instalacja demona ssh - klient i serwer. Za pomocą apt-get oczywiście.  
-``` sudo apt-get install openssh-client ```   
-``` sudo apt-get install openssh-server ```   
-Następnie musimy się zalogować - będzie to wytłumaczone tylko tutaj. Ponieważ każdy już 
-Na maszynie virtualnej sprawdzamy jeszcze nasz adres ip.
-Otwieramy terminal hosta i logujemy
+``` ~$ ping 8.8.8.8 ```   
+Instalacja demona ssh - klient i serwer. Za pomocą apt-get oczywiście.
+``` 
+~$ sudo apt-get install openssh-client  
+~$ sudo apt-get install openssh-server 
+```   
+Następnie musimy się zalogować - będzie to wytłumaczone tylko tutaj. Każdy już powinien to umieć, a jeśli nie to musi poświęcić temu czas przy tej okazji.
+Na maszynie virtualnej sprawdzamy jeszcze nasz adres ip.   
+``` ~$ ifconfig ```     
+Otwieramy terminal hosta i logujemy się za pomocą ssh.     
+``` ~$ ssh nazwisko@ip_maszyny_wirtualnej ```    
+Wpisujemy hasło i dodajemy klucz do znanych wpisując "yes"
+Instalacja przeglądarki links (dobrze znany już nam pakiet apt-get):    
+``` ~$ sudo apt-get install links ```    
+Uruchamiamy links:    
+``` ~$ links google.pl ```   
+Wyłączamy system poleceniem shutdown (tylko SuperUżytkownik może go używać), które jako argument przyjmuje "now", "czas w minutach", lub "godzinę z minutami". Aby wyłączyć system natychmiast należy użyć polecenia w ten sposób:    
+``` 
+~$ sudo shutdown -h now  **** to polecenie wyłącza system
+~$ sudo shutdown -r now  **** to polecenie restartuje system
+~$ sudo shutdown -h +10  **** to polecenie wyłączy system za 10 minut
+```    
+Aby zezwolić na zalogowanie się jako root przez ssh właściwie nic nie musimy robić, gdyż jest to domyślnie możliwe. Aby zabronić edytujemy plik konfiguracyjny ssh, czyli /etc/ssh/sshd_config. W nim odnajdujemy linie: ``` PermitRootLogin yes ``` zmieniamy ją na "no"   
+``` ~$ sudo vim /etc/ssh/sshd_config ```   
+Później restartujemy usługę:   
+``` ~$ sudo /etc/init.d/sshd restart ```   
