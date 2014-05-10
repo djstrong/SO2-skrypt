@@ -57,10 +57,10 @@ Instalacja przeglądarki links (dobrze znany już nam pakiet apt-get):
 Uruchamiamy links:    
 ``` ~$ links google.pl ```   
 Wyłączamy system poleceniem shutdown (tylko SuperUżytkownik może go używać), które jako argument przyjmuje "now", "czas w minutach", lub "godzinę z minutami". Aby wyłączyć system natychmiast należy użyć polecenia w ten sposób:    
-``` 
-~$ sudo shutdown -h now  **** to polecenie wyłącza system
-~$ sudo shutdown -r now  **** to polecenie restartuje system
-~$ sudo shutdown -h +10  **** to polecenie wyłączy system za 10 minut
+```bash
+~$ sudo shutdown -h now  # to polecenie wyłącza system
+~$ sudo shutdown -r now  # to polecenie restartuje system
+~$ sudo shutdown -h +10  # to polecenie wyłączy system za 10 minut
 ```    
 Aby zezwolić na zalogowanie się jako root przez ssh właściwie nic nie musimy robić, gdyż jest to domyślnie możliwe. Aby zabronić edytujemy plik konfiguracyjny ssh, czyli /etc/ssh/sshd_config. W nim odnajdujemy linie: ``` PermitRootLogin yes ``` zmieniamy ją na "no"   
 ``` ~$ sudo vim /etc/ssh/sshd_config ```   
