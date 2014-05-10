@@ -65,4 +65,4 @@ Wyłączamy system poleceniem shutdown (tylko SuperUżytkownik może go używać
 Aby zezwolić na zalogowanie się jako root przez ssh właściwie nic nie musimy robić, gdyż jest to domyślnie możliwe. Aby zabronić edytujemy plik konfiguracyjny ssh, czyli /etc/ssh/sshd_config. W nim odnajdujemy linie: ``` PermitRootLogin yes ``` zmieniamy ją na "no"   
 ``` ~$ sudo vim /etc/ssh/sshd_config ```   
 Później restartujemy usługę:   
-``` ~$ sudo /etc/init.d/sshd restart ```   
+``` ~$ sudo service ssh restart ```   
