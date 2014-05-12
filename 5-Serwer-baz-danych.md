@@ -7,7 +7,7 @@ Co ciekawe to polecenie możemy wykonać w jednej linii:
 Warto od razu ustawić hasło na root dla użytkownika root
 Później należy zmienić ścieżkę, tak aby dane były przechowywane w /var/lib/mysql. Interesujący nas plik to /etc/mysql/my.cnf. Tak się składa, ze ta ścieżka jest ścieżką domyślną dla mysql, więc nie musimy nic zmieniać.
 
-Uruchomienie, restart serwera. Hasło root'a.
+#####Uruchomienie, restart serwera. Hasło root'a.
 Używamy do tego sudo service i kolejno start, restart, ew jeżeli chcemy zatrzymać proces to podajemy stop.
 Jeżeli ktoś przeoczył punkt, w którym mowa aby ustawić hasło root'a na root już przy instalacji może użyć następujących komend:
 ```
@@ -15,7 +15,7 @@ Jeżeli ktoś przeoczył punkt, w którym mowa aby ustawić hasło root'a na roo
 ~$ mysqladmin -u root -p password NOWE_HASLO_DlA_ROOT'a #jeżeli hasło zostało ustawione na złe
 ```
 
-Jak już mamy uruchomiony serwer, to możemy się zalogować na roota i wykonać kolejne polecenia.
+#####Jak już mamy uruchomiony serwer, to możemy się zalogować na roota i wykonać kolejne polecenia.
 ```
 mysql> CREATE USER 'nazwa_uzytkownika' IDENTIFIED BY 'haslo'; #dodanie użytkownika z hasłem
 mysql> CREATE DATABASE IF NOT EXISTS `nazwa_bazy_danych`; #dodanie bazy danych
