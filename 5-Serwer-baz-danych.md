@@ -17,12 +17,12 @@ Jeżeli ktoś przeoczył punkt, w którym mowa aby ustawić hasło root'a na roo
 
 #####Jak już mamy uruchomiony serwer, to możemy się zalogować na roota i wykonać kolejne polecenia.
 ```
-mysql> CREATE USER 'nazwa_uzytkownika' IDENTIFIED BY 'haslo'; #dodanie użytkownika z hasłem
-mysql> CREATE DATABASE IF NOT EXISTS `nazwa_bazy_danych`; #dodanie bazy danych
-mysql> GRANT ALL PRIVILEGES ON ‚baza_danych’.* TO ‚uzytkownik’; #dodanie praw do bazy dla użytkownika
-mysql> DROP DATABASE nazwa_bazy;
 #Ważne!
 #Należy pamiętać, aby nazwa użytkownika i hasło były w pojedynczym apostrofie, a nazwa bazy danych w "ząbku"(klawisz tyldy bez shift)
+mysql> CREATE USER 'nazwa_uzytkownika' IDENTIFIED BY 'haslo'; #dodanie użytkownika z hasłem
+mysql> CREATE DATABASE IF NOT EXISTS `nazwa_bazy_danych`; #dodanie bazy danych
+mysql> GRANT ALL PRIVILEGES ON `baza_danych`.* TO 'uzytkownik'; #dodanie praw do bazy dla użytkownika
+mysql> DROP DATABASE nazwa_bazy;
 ```
 
 Przy opracowaniu wykorzystano materiały publicznie dostępne na stronach:
