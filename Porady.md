@@ -47,6 +47,12 @@ Np. usuwając katalog `rm -r katalog`, sprawdzamy czy faktycznie go nie ma:
 
 `Ctrl+Z` zatrzymuje aktualny proces - można go wznowić używając `jobs`, `fg` i `bg`. Proces taki nie jest zakańczany (zabijany) i może blokować pewne operacje. Np. zatrzymanie poleceń `git` (w szczególności `commit`) uniemożliwi wykonywanie kolejnych na tym repozytorium.
 
+### Restartowanie usług i sprawdzanie statusu
+
+Status usługi sprawdzamy poleceniem: `sudo service nazwa_usługi status`.
+
+Restartujemy usługę za pomocą analogicznego polecenia ze zmienioną komendą, np. `sudo service apache2 restart`. Restartowanie usług za pomocą `/etc/init.d/nazwa_usługi restart` jest starszym sposobem i mniej uniwersalnym.
+
 ### Użytkownicy systemowi i baz danych MySQL są niezależni
 
 
@@ -55,4 +61,4 @@ Np. usuwając katalog `rm -r katalog`, sprawdzamy czy faktycznie go nie ma:
 
 ### Dodatkowe terminale
 
-W środowisku graficznym możemy otworzyć nowe terminale lub zakładki. W przypadku braku środowiska graficznego kolejne terminale są dostępne przez kombinację `Alt+F1-F6` (dodatkowo `Ctrl` jeśli chcemy się przełączyć ze środowiska graficznego; `Ctrl+Alt+F7` powraca do środowiska graficznego). Konsola dostępna pod `Alt+F1` jest domyślną.
+W środowisku graficznym możemy otworzyć nowe terminale lub zakładki. W przypadku braku środowiska graficznego kolejne terminale są dostępne przez kombinację `Alt+F1-F6` (dodatkowo `Ctrl` jeśli chcemy się przełączyć ze środowiska graficznego; `Alt+F7` powraca do środowiska graficznego). Konsola dostępna pod `Alt+F1` jest domyślną.
