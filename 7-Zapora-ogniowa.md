@@ -15,7 +15,7 @@ Blokujemy cały ruch przychodzący na TCP i ustawiamy możliwość logowania prz
 ~$ sudo iptables -A INPUT -s iphosta -p tcp --dport 22 -j ACCEPT
 ```
 Aby sprawdzić czy działa tak jak powinno możemy spróbować się zalogować z hosta i z innego komputera, używając ssh. Logowanie powinno być możliwe z hosta i niemożliwe z innego komputera.
-
+Zablokowanie ruchu wychodzącego na tcp dla portu 80 i wszystkich hostów oprócz localhosta:
 ```
 ~$ sudo iptables -A OUTPUT -p tcp --dport 80 -j DROP
 ~$ sudo iptables -A OUTPUT -d localhost -p tcp --dport 80 -j ACCEPT
