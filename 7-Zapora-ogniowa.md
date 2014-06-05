@@ -26,12 +26,12 @@ Zablokowanie ruchu wychodzącego na tcp dla portu 80 i wszystkich hostów opróc
 ```
 Forwardowanie przy użyciu ssh: 
 ```
-~$ ssh -L 8080:localhost:80 ip_virtual
+~$ ssh -L 8080:localhost:80 nazwisko@ip_virtual
 ```
 Ponieważ forwardowanie to przekierowanie wywołania zapytania na naszym porcie na inny komputer na dowolnym porcie sposób jego wywołania nie jest intuicyjny, albo przynajmniej "nietrywialny". Powyższe polecenie wywołujemy na maszynie hosta. Interesujące jest dla nas aby wywołanie zapytania na port 8080 na hoście przekierowało nas gdzie indziej, tzn. na ip_virtual i tam wywołało zapytanie na domenę localhost na porcie 80.
 Tak więc składnia jest następująca:
 ```
-~$ ssh -L port_naszej_maszyny:domena_do_wywołania:port_wywołania ip_gdzie_wywołujemy
+~$ ssh -L port_naszej_maszyny:domena_do_wywołania:port_wywołania użytkownik@ip_gdzie_wywołujemy
 ```
 Przy okazji tego tematu warto znać również poniższe komendy:
 ```
